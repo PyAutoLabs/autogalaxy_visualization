@@ -223,8 +223,8 @@ figures:
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: delaunay
-  bytes: 582206
-  sha256: f07837d56d3b9da5006875d2eec948a3eaa7d64fbc540d9f8ff82777d98c5377
+  bytes: 582247
+  sha256: 8f0b61d41ef082d37c49137b1dee428f16606208760039287daefc31850d71f3
 - file: scripts/interferometer/images/visualization/parametric/fit.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
