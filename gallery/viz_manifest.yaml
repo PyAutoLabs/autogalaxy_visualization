@@ -4,254 +4,254 @@
 schema: 1
 generated: '2026-09-29'
 rendered_with:
-  autogalaxy: 2026.8.17.1
-  autoarray: 2026.8.17.1
-  autofit: 2026.8.17.1
+  autogalaxy: 2026.9.27.2
+  autoarray: 2026.9.27.2
+  autofit: 2026.9.27.2
 figure_count: 41
 figures:
 - file: scripts/ellipse/images/visualization/dataset.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: ''
-  bytes: 460627
-  sha256: a23cdc6ead49ec1e5edaf1bdb91bfbf05dee2a0103521df1d2bea041ec31aaba
+  bytes: 473994
+  sha256: 6539619577625130bcb2edc5dbc5fd84b5fae0ca19afb8a5cb5ba693a032525e
 - file: scripts/ellipse/images/visualization/masked/dataset.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: masked
-  bytes: 284916
-  sha256: dc2c97fd9e1945a64b8ad4f779e1f343cfc5b6a0220ebd602923a60edfac49b5
+  bytes: 299568
+  sha256: 7e39b51d15a880f411fad471f125a624cbec1a165b7682834480b0110369d063
 - file: scripts/ellipse/images/visualization/masked/ellipse_fit.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: masked
-  bytes: 185109
-  sha256: 2cfe031245f94cb6ed35a3a9f36278434ae8510f6e1200af008def4e1a6402fa
+  bytes: 184190
+  sha256: 8da9e06d50b39b67216c9d57c6b03f0ef73b0e9446e910d2f21d9f1723f439fa
 - file: scripts/ellipse/images/visualization/masked/ellipse_residuals.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: masked
-  bytes: 33035
-  sha256: 62e89a43ab2485779e4c927e6506f95d74a75668fd89bc6e9c71729269eb10e5
+  bytes: 34238
+  sha256: 7fc67bf3ee09268e46d9259fa570a506336cbccb087792e2047b5ef07a1084d6
 - file: scripts/ellipse/images/visualization/masked/fit_ellipse.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: masked
-  bytes: 260566
-  sha256: ee07dd06a52f02faaa93cdf2df2c5ea1133abbadd7b6f59a2df65e26eace694c
+  bytes: 261435
+  sha256: 45299163c62f0e143951341cfb8dcf5e910eb136989bcdb44e3e2c5a60bde70c
 - file: scripts/ellipse/images/visualization/multipole/dataset.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: multipole
-  bytes: 460627
-  sha256: a23cdc6ead49ec1e5edaf1bdb91bfbf05dee2a0103521df1d2bea041ec31aaba
+  bytes: 473994
+  sha256: 6539619577625130bcb2edc5dbc5fd84b5fae0ca19afb8a5cb5ba693a032525e
 - file: scripts/ellipse/images/visualization/multipole/ellipse_fit.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: multipole
-  bytes: 330440
-  sha256: 7e2a4017f9a6775e05666fd2d42435c70cb27b4e00169b314731f682f41339af
+  bytes: 329302
+  sha256: 0497ce3bb99be30e93d5fcc0de0f12d65bb129ba6c313fec7e0cd9511c492225
 - file: scripts/ellipse/images/visualization/multipole/ellipse_residuals.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: multipole
-  bytes: 34736
-  sha256: 7e2f69afa7e2cf204baa4e706bb700e96a5f0a0be1a3d4f9fdea7025b8f1acd6
+  bytes: 35942
+  sha256: 279e2482d2ccde960833eb0993deeabf093cb86b24906acb5f37f641ee012606
 - file: scripts/ellipse/images/visualization/multipole/fit_ellipse.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: multipole
-  bytes: 281896
-  sha256: bc8c719dceeb54c4c9dfed4ce6c5595617d37b54eb4b2e64e8f2093a90c309f2
+  bytes: 280696
+  sha256: 4a0720e101c0781542b606e8fa19452efb00de6c53b11da608e23a19b62e699a
 - file: scripts/ellipse/images/visualization/multipole_scaled/dataset.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: multipole_scaled
-  bytes: 460627
-  sha256: a23cdc6ead49ec1e5edaf1bdb91bfbf05dee2a0103521df1d2bea041ec31aaba
+  bytes: 473994
+  sha256: 6539619577625130bcb2edc5dbc5fd84b5fae0ca19afb8a5cb5ba693a032525e
 - file: scripts/ellipse/images/visualization/multipole_scaled/ellipse_fit.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: multipole_scaled
-  bytes: 330440
-  sha256: 7e2a4017f9a6775e05666fd2d42435c70cb27b4e00169b314731f682f41339af
+  bytes: 329302
+  sha256: 0497ce3bb99be30e93d5fcc0de0f12d65bb129ba6c313fec7e0cd9511c492225
 - file: scripts/ellipse/images/visualization/multipole_scaled/ellipse_residuals.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: multipole_scaled
-  bytes: 34736
-  sha256: 7e2f69afa7e2cf204baa4e706bb700e96a5f0a0be1a3d4f9fdea7025b8f1acd6
+  bytes: 35942
+  sha256: 279e2482d2ccde960833eb0993deeabf093cb86b24906acb5f37f641ee012606
 - file: scripts/ellipse/images/visualization/multipole_scaled/fit_ellipse.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: multipole_scaled
-  bytes: 281896
-  sha256: bc8c719dceeb54c4c9dfed4ce6c5595617d37b54eb4b2e64e8f2093a90c309f2
+  bytes: 280696
+  sha256: 4a0720e101c0781542b606e8fa19452efb00de6c53b11da608e23a19b62e699a
 - file: scripts/ellipse/images/visualization/plain/dataset.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: plain
-  bytes: 460627
-  sha256: a23cdc6ead49ec1e5edaf1bdb91bfbf05dee2a0103521df1d2bea041ec31aaba
+  bytes: 473994
+  sha256: 6539619577625130bcb2edc5dbc5fd84b5fae0ca19afb8a5cb5ba693a032525e
 - file: scripts/ellipse/images/visualization/plain/ellipse_fit.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: plain
-  bytes: 330061
-  sha256: 3f10102ca91a3c9dc14e6d3ac7aecc5b3a5b8745c23029c940d031565d19a2f9
+  bytes: 329144
+  sha256: d272df8ece8e7c34b2d5ba39c09cd5b347ae8f5ddc8deefdb4a58dd9d3f0c7d3
 - file: scripts/ellipse/images/visualization/plain/ellipse_residuals.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: plain
-  bytes: 37222
-  sha256: ad8f3dee48703b2d42152d90f88e6f8ccda5c29510fc1585bd2c4b45ca2d4188
+  bytes: 38545
+  sha256: d8d0600ded0a6d5de5a5214911c8a9853cbca2a638d3041753b5346933416b4d
 - file: scripts/ellipse/images/visualization/plain/fit_ellipse.png
   producer: scripts/ellipse/visualization.py
   domain: ellipse
   source: plain
-  bytes: 290369
-  sha256: 54cf0ef026405f4b91202d50c9a665bb17e2919898bf0ead479fc1303a552634
+  bytes: 291970
+  sha256: 2f07ecc6cb696fa761d992a04e339405299e0cfdde5acfbd0aba0a3caca3a07f
 - file: scripts/imaging/images/visualization/adapt_images.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: ''
-  bytes: 130245
-  sha256: 40e32805b87703b0359bb95f485bfd72211d7e2beb9de8176f85e21af201c128
+  bytes: 122302
+  sha256: 179622c855075100c54389a31d3b61bbecbacada6776721f130075deda478f08
 - file: scripts/imaging/images/visualization/dataset.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: ''
-  bytes: 464641
-  sha256: d2b66a9b9495875d80124a15499f36d436387826a174dfed626b0f455e5a17c1
+  bytes: 478571
+  sha256: da151e5deed24c5ef126f3ff61e0f795b3ccff71fb68fdab214cb60ee5724d16
 - file: scripts/imaging/images/visualization/delaunay/fit.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: delaunay
-  bytes: 722939
-  sha256: 0f7992ce59c67cccc3455f97cad4772516315ef51c91e69382b163f1046418dc
+  bytes: 740189
+  sha256: 529b386ae875a891f00f700ee30f669fefe7f25f9f80faf1104bbb89d96d52c6
 - file: scripts/imaging/images/visualization/delaunay/galaxies.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: delaunay
-  bytes: 309474
-  sha256: 835d35827076509c176a1cc1f0fc93318ce7251f26739a205001d35cb0290d87
+  bytes: 299005
+  sha256: 6ae97541aa46a5e1eb789d91c3c9f66445916bc7b3ac22c5cd0bd79e49f75349
 - file: scripts/imaging/images/visualization/delaunay/galaxy_images.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: delaunay
-  bytes: 105475
-  sha256: 64397a8992eeff9e560fd61cd1c4c65fceb7af322d1fbcfe8f73f788737e5244
+  bytes: 98576
+  sha256: de3aac72ef631e636a3c7ee0afba506faf30bbd73b7460267ca15c86205cd1bb
 - file: scripts/imaging/images/visualization/delaunay/inversion_0_0.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: delaunay
-  bytes: 419534
-  sha256: 990505f26fadde0a23039cd89cac8c3116030224c79dfed5c259c8013fa764f6
+  bytes: 504319
+  sha256: 0b42df285c284f25cdaf05efa17f3652072bddc51041f289289bf10afc0eae49
 - file: scripts/imaging/images/visualization/delaunay/of_galaxy_0.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: delaunay
-  bytes: 277378
-  sha256: 1a380ca97d88f42101dcd5365277d903d0a66f1b5e9c5f28288d5474cbebc46a
+  bytes: 244432
+  sha256: f57083fb66dea4ece4ed28d9e6019964533d629e0cd126dc4b60c476bc9982fd
 - file: scripts/imaging/images/visualization/parametric/fit.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: parametric
-  bytes: 909203
-  sha256: 8ca7c2f858b65a842e5cb559931aff5850cca9426790ea3971576ba34383db13
+  bytes: 935755
+  sha256: af383e43d208a8532a358a58baa4a8375e471133a5f3908102fec83888add584
 - file: scripts/imaging/images/visualization/parametric/galaxies.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: parametric
-  bytes: 359715
-  sha256: 307d1ed6268a852bfb663c6812a0f00352e1348e668a371936729a8ba1e07ee4
+  bytes: 432529
+  sha256: a0cf8004e7d368fa07cb6edf623858705e878f5662811c03f2f7f9807a0006b5
 - file: scripts/imaging/images/visualization/parametric/galaxy_images.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: parametric
-  bytes: 124806
-  sha256: 5d3820e5780fc0d150d9c06f986956dc52edd1411bd46ff9005d5c171f0cccd5
+  bytes: 116872
+  sha256: 71c36108900af7d1dc23ab017a4e78b497e2d3d7d71830fe1d966101039127ed
 - file: scripts/imaging/images/visualization/parametric/of_galaxy_0.png
   producer: scripts/imaging/visualization.py
   domain: imaging
   source: parametric
-  bytes: 253140
-  sha256: c636c48b29e6cf5a9784134e5346f733740fd4e9d60d25db03eb965b9b64c659
+  bytes: 225851
+  sha256: 4f7babfc3bb4e7a7b6f07cd13a05cbfe2594f7186f4f49815bd04fdb138b4b5e
 - file: scripts/interferometer/images/visualization/adapt_images.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: ''
-  bytes: 103661
-  sha256: fbe309540231a379961cfc4643d4d4e68b4d850c7dc8c671df770b35af385c5a
+  bytes: 96381
+  sha256: 51b3304330516eca2ceda66e8a10e58e2bbe5108f68000ebb31b1f94669d6b18
 - file: scripts/interferometer/images/visualization/dataset.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: ''
-  bytes: 161337
-  sha256: e3c0f32468b0faef18824272b40c9392e28dc36e58d8dc11717499a2070dab53
+  bytes: 183873
+  sha256: ab81a3a7f9825579faa81d8b9617346fe65f61baefececeb2c823330cd1b0563
 - file: scripts/interferometer/images/visualization/delaunay/fit.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: delaunay
-  bytes: 1140418
-  sha256: 6a9c083ea382430a723e3c96dfee353e8fef1b7c304b1b7c8cf26bc85aa32ffc
+  bytes: 855239
+  sha256: 4dac27499fc0dffa765c452a25b6e00a1601adb63a9957deb77b12fb3da6648c
 - file: scripts/interferometer/images/visualization/delaunay/fit_dirty_images.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: delaunay
-  bytes: 533623
-  sha256: 938b5ba4d74af7a73dbbc2da08c602158a89ccbdd2a011880baf2428c085bca0
+  bytes: 575919
+  sha256: a165d373e139996411cf44abd4dc144c24938495d006c8745cf05978f288b714
 - file: scripts/interferometer/images/visualization/delaunay/fit_real_space.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: delaunay
-  bytes: 300981
-  sha256: a6dd16505b59aa4d9ca6195c48f92e49ccf89d5ed19e27c696b913547dc98ffd
+  bytes: 294298
+  sha256: 1276c54aaa11ccbfa35efda427c0e0c980030f471b48d1ce84401ea440e77632
 - file: scripts/interferometer/images/visualization/delaunay/galaxies.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: delaunay
-  bytes: 254859
-  sha256: 504fa9b35529e6dbf7ed07b4514af4f8d5a701140cf36d432e6c664e7aa28ce1
+  bytes: 246269
+  sha256: 255e9218609316a5da7b1492c3b300104f1db275a8b5aff377a1c0d31b354a0e
 - file: scripts/interferometer/images/visualization/delaunay/galaxy_images.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: delaunay
-  bytes: 86787
-  sha256: 920132251105e5d983695ca24887d12eeac799d17da1d10b360aa9691c7901af
+  bytes: 79629
+  sha256: 2646f1ce77acae528382958cb389f42c68246dbabc078d07b68e32416141dfcc
 - file: scripts/interferometer/images/visualization/delaunay/inversion_0_0.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: delaunay
-  bytes: 495359
-  sha256: 94d5de8306ceb29102a2cd798b7251fa03356a6da4c434d893b1141aeb7a5b2f
+  bytes: 582206
+  sha256: f07837d56d3b9da5006875d2eec948a3eaa7d64fbc540d9f8ff82777d98c5377
 - file: scripts/interferometer/images/visualization/parametric/fit.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: parametric
-  bytes: 1231095
-  sha256: 780b47ee51d938cb33bd32983f27d4227da5c68e6870a6d677eb1e61cf9a7d96
+  bytes: 930634
+  sha256: 4c3748308b1102070ecc2807a30a13179646d46a5f89e84249d430f9df3c116e
 - file: scripts/interferometer/images/visualization/parametric/fit_dirty_images.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: parametric
-  bytes: 532515
-  sha256: 743dc89ce400811b3d260258254a06872339edf7d7909b7223d07e3f272b3937
+  bytes: 578638
+  sha256: 7fdce51fdc1b77ec0db454d87ec0812071c42ec60a4df4a06c20ab8a72a9307c
 - file: scripts/interferometer/images/visualization/parametric/fit_real_space.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: parametric
-  bytes: 294132
-  sha256: 1bc8c392b8d69280ef40590e01c56fd4ce08f54481e7ecccc37b3a954a85da6b
+  bytes: 354148
+  sha256: 632ec3dcfc43ca07da0ee44eca4187ce53f49e7f6a9d5a97eb349ef47c31fcc9
 - file: scripts/interferometer/images/visualization/parametric/galaxies.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: parametric
-  bytes: 294132
-  sha256: 1bc8c392b8d69280ef40590e01c56fd4ce08f54481e7ecccc37b3a954a85da6b
+  bytes: 354148
+  sha256: 632ec3dcfc43ca07da0ee44eca4187ce53f49e7f6a9d5a97eb349ef47c31fcc9
 - file: scripts/interferometer/images/visualization/parametric/galaxy_images.png
   producer: scripts/interferometer/visualization.py
   domain: interferometer
   source: parametric
-  bytes: 108682
-  sha256: 64ee00d2e6e8139c8ca7a81af3eb2e45a4e21ea98bb412562555ca798c034bfc
+  bytes: 100552
+  sha256: 438cfd8e96d19d66a9d0070f5034774d9ffcbbfa8e1c5bbe6cf37f1b584d411d
