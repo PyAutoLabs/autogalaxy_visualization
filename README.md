@@ -83,7 +83,12 @@ Accepted critiques are filed with the `eyes-critique` label.
 - [autogalaxy_workspace_test](https://github.com/PyAutoLabs/autogalaxy_workspace_test) —
   visualization tests (file / FITS-HDU assertions) the producers here were ported from.
 
-## Community & support
+## Community & Contributing
 
-- **Slack** — [PyAutoLens workspace](https://join.slack.com/t/pyautolens/shared_invite/zt-2cufp4eyf-fXfgMxRGuvg~bMrI3uOAxg) for questions (it hosts PyAutoGalaxy too).
-- **Issues** — file figure bugs and visualization requests on this repo's [issue tracker](https://github.com/PyAutoLabs/autogalaxy_visualization/issues).
+**PyAutoGalaxy** is built in the open by its users: everyone is welcome to ask questions,
+share what they have made with it, and contribute.
+
+Questions, ideas and bug reports: the [PyAutoLabs Discussions](https://github.com/orgs/PyAutoLabs/discussions).
+Chat with us on [Slack](https://join.slack.com/t/pyautolens/shared_invite/zt-2cufp4eyf-fXfgMxRGuvg~bMrI3uOAxg).
+
+Community-built tools and tutorials, and how to contribute: the [**PyAutoGalaxy** community page](https://pyautogalaxy.readthedocs.io/en/latest/general/community.html).
