@@ -67,6 +67,12 @@ python gallery/gallery_build.py          # rebuild GALLERY.md + gallery/viz_mani
 python gallery/gallery_build.py --check  # fail if GALLERY.md or the manifest is stale vs the PNGs on disk
 ```
 
+**On-the-fly review (Eyes scratch).** Set `PYAUTO_EYES_SCRATCH` to any folder
+you can browse and `gallery_run.sh` mirrors each successful
+producer's domain to `$PYAUTO_EYES_SCRATCH/autogalaxy/<domain>/` (folder replaced, so no stale
+figures); after running a producer by hand, `python _viz_cli.py scratch <domain>` does the same.
+Unset = no-op (CI never sets it). Nothing is committed from the scratch folder.
+
 Each producer wipes its own `scripts/<domain>/images/visualization/` tree first, so the committed
 PNG set is exactly what the last run produced. Commit the PNGs, `GALLERY.md` and
 `gallery/viz_manifest.yaml` together.

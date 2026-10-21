@@ -12,6 +12,9 @@ the ``scripts/<domain>/visualization.py`` producers need are kept:
 - ``dataset_path(dataset_type, instrument)`` — ``<root>/dataset/<type>/<instrument>``.
 - ``auto_simulate_if_missing(...)`` — shell out to
   ``scripts/misc/simulators/<type>.py --instrument <name>`` when a dataset is absent.
+- ``mirror_to_scratch(domains)`` — copy ``scripts/<domain>/images/`` PNGs to the opt-in
+  ``$PYAUTO_EYES_SCRATCH/<lib>/<domain>/`` for on-the-fly review (no-op when unset);
+  also ``python _viz_cli.py scratch [domain ...]``. ``gallery/gallery_run.sh`` calls it.
 
 Typical use at the top of a producer::
 
@@ -27,6 +30,8 @@ Typical use at the top of a producer::
 
 from __future__ import annotations
 
+import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -98,3 +103,50 @@ def auto_simulate_if_missing(
         ],
         check=True,
     )
+
+
+# The PyAutoEyes dashboard names this repo's section by its library import name, and the
+# scratch mirror reuses that name: ``$PYAUTO_EYES_SCRATCH/<EYES_LIB>/<domain>/``.
+EYES_LIB = "autogalaxy"
+EYES_SCRATCH_ENV = "PYAUTO_EYES_SCRATCH"
+
+
+def mirror_to_scratch(domains: list[str] | None = None) -> Path | None:
+    """Copy freshly rendered PNGs to the opt-in Eyes scratch folder; return its lib folder.
+
+    For on-the-fly figure review before any PR or CI. When ``$PYAUTO_EYES_SCRATCH`` is
+    unset this is a silent no-op returning ``None`` (so CI and other machines are
+    untouched). Otherwise each domain's ``$PYAUTO_EYES_SCRATCH/<EYES_LIB>/<domain>/`` is
+    deleted and refilled with every PNG under ``scripts/<domain>/images/`` (subpaths
+    below ``images/`` kept), so no stale figure survives a re-render. ``domains=None``
+    mirrors every domain that has an ``images/`` folder (``misc`` never does).
+    """
+    scratch = os.environ.get(EYES_SCRATCH_ENV)
+    if not scratch:
+        return None
+    scripts = repo_root() / "scripts"
+    if domains is None:
+        domains = sorted(p.parent.name for p in scripts.glob("*/images") if p.parent.name != "misc")
+    lib_dir = Path(scratch).expanduser() / EYES_LIB
+    for domain in domains:
+        images = scripts / domain / "images"
+        if not images.is_dir():
+            print(f"  [eyes-scratch] skip {domain}: no {images.relative_to(scripts.parent)}")
+            continue
+        dest = lib_dir / domain
+        shutil.rmtree(dest, ignore_errors=True)
+        pngs = sorted(images.rglob("*.png"))
+        for png in pngs:
+            target = dest / png.relative_to(images)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(png, target)
+        print(f"  [eyes-scratch] {len(pngs)} PNGs -> {dest}")
+    return lib_dir
+
+
+if __name__ == "__main__":
+    # ``python _viz_cli.py scratch [domain ...]`` — mirror rendered PNGs to the Eyes scratch.
+    if len(sys.argv) < 2 or sys.argv[1] != "scratch":
+        sys.exit("usage: python _viz_cli.py scratch [domain ...]")
+    if mirror_to_scratch(sys.argv[2:] or None) is None:
+        print(f"  [eyes-scratch] ${EYES_SCRATCH_ENV} is unset; nothing mirrored")
