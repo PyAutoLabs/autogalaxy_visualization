@@ -12,6 +12,11 @@
 #   bash gallery/gallery_run.sh --all           # same (explicit; used by CI)
 #   bash gallery/gallery_run.sh imaging         # one domain + build + check
 #   bash gallery/gallery_run.sh --build-only    # skip runs, just build + check
+#
+# Eyes scratch mirror (opt-in, for on-the-fly review before any PR / CI): when
+# PYAUTO_EYES_SCRATCH is set, each successful producer's domain is mirrored to
+# $PYAUTO_EYES_SCRATCH/<lib>/<domain>/ via `python _viz_cli.py scratch <domain>`
+# (folder replaced each time; a mirror failure never fails the run). Unset = no-op.
 
 set -uo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
@@ -42,6 +47,10 @@ for script in "${run_list[@]}"; do
     mkdir -p output/gallery_logs
     if python "$script" > "$log" 2>&1; then
         echo "   ok ($((SECONDS - start))s)"
+        if [[ -n "${PYAUTO_EYES_SCRATCH:-}" ]]; then
+            domain="${script#scripts/}"
+            python _viz_cli.py scratch "${domain%%/*}" || echo "   (eyes scratch mirror failed; continuing)"
+        fi
     else
         echo "   FAILED ($((SECONDS - start))s) — traceback in $log"
         tail -n 30 "$log"
