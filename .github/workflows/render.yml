@@ -16,10 +16,10 @@
 # Copied from autolens_visualization/.github/workflows/render.yml (itself adapted
 # from autolens_profiling/.github/workflows/profile.yml). `[skip ci]` keeps
 # lint.yml from re-running on the bot commit (it would loop); `contents: write`
-# lets the bot push. The PyAutoEyes dispatch needs a cross-repo token: it uses
-# `secrets.PAT_PYAUTOLABS` (the org PAT the Hands release pipeline uses), which must
-# be granted to this repo and must cover PyAutoLabs/PyAutoEyes; without it the step
-# warns and skips rather than failing the render.
+# lets the bot push. The PyAutoEyes dispatch uses a per-step token minted from the
+# org-owned `pyautolabs-bot` GitHub App (`vars.APP_CLIENT_ID` /
+# `secrets.APP_PRIVATE_KEY`, both org-level), scoped to PyAutoLabs/PyAutoEyes with
+# contents: write; a missing credential fails the job rather than skipping.
 
 name: render
 
@@ -84,14 +84,20 @@ jobs:
           Triggered by ${{ github.event_name }} (run ${{ github.run_id }})."
           git push origin HEAD:main
 
+      - name: Mint a pyautolabs-bot token for the PyAutoEyes dispatch
+        id: app
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: PyAutoLabs
+          repositories: PyAutoEyes
+          permission-contents: write
+
       - name: Tell the PyAutoEyes dashboard to refresh (repository_dispatch eyes-refresh)
         env:
-          GH_TOKEN: ${{ secrets.PAT_PYAUTOLABS }}
+          GH_TOKEN: ${{ steps.app.outputs.token }}
         run: |
-          if [ -z "$GH_TOKEN" ]; then
-            echo "::warning::PAT_PYAUTOLABS is not available to this repo — skipping the eyes-refresh dispatch to PyAutoLabs/PyAutoEyes."
-            exit 0
-          fi
           sha=$(git rev-parse HEAD)
           gh api repos/PyAutoLabs/PyAutoEyes/dispatches \
             -f event_type=eyes-refresh \
