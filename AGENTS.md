@@ -170,7 +170,8 @@ plus `lychee` on every `*.md`, then every producer runs for real followed by
 fails). `render.yml` (manual + `repository_dispatch: pyautogalaxy-release`) re-renders with the
 released PyPI stack, commits PNGs + `GALLERY.md` + `gallery/viz_manifest.yaml` back as
 `github-actions[bot]` `[skip ci]`, then dispatches `eyes-refresh` to PyAutoEyes (token:
-`secrets.PAT_PYAUTOLABS`; the step warns and skips when the secret is unavailable).
+a per-step `pyautolabs-bot` GitHub App token from `vars.APP_CLIENT_ID` / `secrets.APP_PRIVATE_KEY`,
+scoped to PyAutoEyes; a missing credential fails the job).
 
 ## Sandboxed / restricted runs
 
